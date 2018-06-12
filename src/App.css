@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40px;
+  float: left;
+  display: inline;
+}
+
+.App-logo1 {
+  height: 40px;
+  float: right;
+  display: inline;
+}
+
+.App-header {
+  background-color: #222;
+  height: 60px;
+  color: white;
+  display:flex;
+  align-items: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin: auto;
+}
+
+input,
+.counties-grid{
+  width: 250px;
+  font-size: 1.2em;
+}
+
+.search-counties {
+  position: absolute;
+  width: 250px;
+  z-index: 100;
+  transform: translate(-250px, 0);
+  transition: transform 0.3s ease;
+}
+
+.search-counties-open {
+  position: absolute;
+  width:250px;
+  z-index: 100;
+  transform: translate(0, 60);
+  transition: transform 0.3s ease;
+}
+
+.icon-text-hidden {
+  visibility: hidden;
+}
+
+.icon-text-visible {
+  visibility: visible;
+}
+
+.clear-text-hidden {
+  visibility: hidden;
+}
+
+.clear-text-visible {
+  visibility: visible;
+}
+
+@media (min-width: 750px) {
+  .search-counties {
+    transform: translate(0, 0);
+    transition: transform 0.3s ease;
+  }
+
+  .icon-text-hidden {
+    visibility: hidden;
+  }
+
+  .icon-text-visible {
+    visibility: hidden;
+  }
+
+  .App-logo {
+    display: none;
+  }
+
+  .App-title {
+    font-size: 2.5em;
+  }
+}
