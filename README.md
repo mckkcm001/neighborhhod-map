@@ -34,7 +34,7 @@ Then execute `npm install` and `npm start` to see the app at [localhost:3000](lo
 
 ## Dependencies/References
 
-Must have [node](https://nodejs.org/en/) and [npm](https://docs.npmjs.com/getting-started/installing-node) installed.
-County boundary line overlay from www.no5w.com/OverlayCaliforniaRev4.kml (copy in src folder).
-[Google maps API](https://developers.google.com/maps/documentation/javascript/tutorial)
-[US Census API](https://www.census.gov/data/developers/data-sets/popest-popproj/popest.html)
+*Must have [node](https://nodejs.org/en/) and [npm](https://docs.npmjs.com/getting-started/installing-node) installed.
+*County boundary line overlay from www.no5w.com/OverlayCaliforniaRev4.kml (copy in src folder).
+*[Google maps API](https://developers.google.com/maps/documentation/javascript/tutorial)
+*[US Census API](https://www.census.gov/data/developers/data-sets/popest-popproj/popest.html)
