@@ -16,12 +16,9 @@ class Search extends Component {
    * store it in the App state.
    */
   updateCounties = (match) => {
-    let matches = []
-    this.props.appState.allCounties.forEach(county => {
-      if (county[2].split(',')[0].toLowerCase().includes(match.toLowerCase())){
-        matches.push(county)
-      }
-    })
+    let matches = Object.keys(this.props.appState.counties).filter(county =>
+      county.toLowerCase().includes(match.toLowerCase())
+    )
     this.setState({query: match})
     this.props.updateCounties(matches)
   }
@@ -38,8 +35,8 @@ class Search extends Component {
         <div className="search-counties-bar">
           <div className="search-counties-input-wrapper">
             <input
-              role="textbox"
-              contenteditable="true"
+              tabIndex="0"
+              contentEditable="true"
               aria-label="search-by-county"
               type="text"
               placeholder="Search by county"
@@ -49,15 +46,36 @@ class Search extends Component {
           </div>
         </div>
         <div className="search-counties-results">
-          <select aria-label="counties" className="counties-grid" onChange={this.props.onCountySelect} size="10">
-          {this.props.appState.viewCounties !== [] && (
-            this.props.appState.viewCounties.map(county => (
-              <option key={county[2].split(',')[0]} >
-                {county[2].split(',')[0]}
-              </option>
-            ))
+          <select
+            tabIndex="0"
+            aria-label="counties"
+            className="counties-grid"
+            onChange={this.props.onCountySelect}
+            size="10"
+          >
+          {this.props.appState.counties !== {} && (
+            Object.keys(this.props.appState.counties).map(county => (
+              this.props.appState.counties[county].showMarker &&
+                <option
+                  tabIndex="0"
+                  key={county}
+                >
+                  {county}
+                </option>
+              )
+            )
           )}
-        </select>
+          </select>
+        </div>
+        <div className="geocode-wrapper">
+          {this.props.appState.selected &&
+            <div className="geocode">
+              <h4>{this.props.appState.selected}</h4>
+              <p><b>Geocode</b></p>
+              <p>Latitude: {this.props.appState.counties[this.props.appState.selected].location.lat}</p>
+              <p>Longitude: {this.props.appState.counties[this.props.appState.selected].location.lng}</p>
+            </div>
+          }
         </div>
       </div>
     )

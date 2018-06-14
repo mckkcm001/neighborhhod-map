@@ -8,12 +8,6 @@
   display: inline;
 }
 
-.App-logo1 {
-  height: 40px;
-  float: right;
-  display: inline;
-}
-
 .App-header {
   background-color: #222;
   height: 60px;
@@ -49,19 +43,15 @@ input,
   transition: transform 0.3s ease;
 }
 
+.geocode-wrapper {
+  background-color: white;
+  padding: 10px;
+}
 .icon-text-hidden {
   visibility: hidden;
 }
 
 .icon-text-visible {
-  visibility: visible;
-}
-
-.clear-text-hidden {
-  visibility: hidden;
-}
-
-.clear-text-visible {
   visibility: visible;
 }
 

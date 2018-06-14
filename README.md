@@ -32,6 +32,9 @@ lines 117 and 105 of App.js and save.
 The load-google-maps-api must be installed with `npm install --save load-google-maps-api`.
 Then execute `npm install` and `npm start` to see the app at [localhost:3000](localhost:3000).
 
+To create a production build, use `npm run build`.
+
+
 ## Dependencies/References
 
 * Must have [node](https://nodejs.org/en/) and [npm](https://docs.npmjs.com/getting-started/installing-node) installed.
